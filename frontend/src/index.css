@@ -1,0 +1,63 @@
+* {
+  padding: 0%;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+.navbarcolor {
+  background-color: #faedcd;
+}
+.text {
+  font-size: 30px;
+  color: red;
+}
+.footerbg {
+  background-color: black;
+}
+
+/* .item a {
+  text-decoration: none;
+  color: red;
+  padding-top: 5px;
+  padding-bottom: 5px;
+} */
+.list-1 {
+  text-decoration: none;
+  color: red;
+}
+
+/* .height {
+  min-height: calc(100vh - 110px);
+} */
+.header {
+  background-image: url("./images/bgimage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+}
+.topimage {
+  background-image: url("./images/aboutusf.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  height: 70vh;
+}
+
+.bgcolour {
+  background-color: #ebe8e0;
+}
+.min-height {
+  min-height: calc(100vh - 3px);
+  /* height: 5000px; */
+}
+.calculator {
+  box-shadow: 0 0 18px rgba(0, 0, 0,  0.66);
+}
+@media (max-width: 991px) {
+  .setting {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
