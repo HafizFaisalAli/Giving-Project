@@ -27,8 +27,8 @@ const Footer = () => {
           </div>
           <div className="row">
             <div className="col-md-4 ">
-              <h3 className="mt-4 ms-5 text-uppercase">Contact Us</h3>
-              <div className="px-5 mt-3">
+              <h3 className="mt-4 ms-md-5 text-uppercase">Contact Us</h3>
+              <div className="px-md-5 mt-3">
                 <Link to="/" className="list-1 d-flex  " onClick={scrollToTop}>
                   Home
                 </Link>
@@ -64,7 +64,7 @@ const Footer = () => {
                 </Link>
 
                 <Link className="list-1 d-flex pt-2 ">
-                  <span className="mx-1">
+                  <span className="mx-md-1">
                     <BsEnvelopeFill />
                   </span>
                   Givingus@gmail.com
@@ -72,8 +72,8 @@ const Footer = () => {
               </div>
             </div>
             <div className="col-md-4 px-3 ">
-              <h3 className="mt-4 ms-5 text-uppercase">Zakat</h3>
-              <div className="px-5 mt-3">
+              <h3 className="mt-4 ms-md-5 text-uppercase">Zakat</h3>
+              <div className="px-md-5 mt-3">
                 <Link className="list-1 d-flex pt-2 ">
                   <span>
                     <IoCall />
@@ -89,8 +89,8 @@ const Footer = () => {
               </div>
             </div>
             <div className="col-md-4 px-1 ">
-              <h3 className="mt-4 ms-5 text-uppercase">Caritas</h3>
-              <div className="px-5 mt-3">
+              <h3 className="mt-4 ms-md-5 text-uppercase">Caritas</h3>
+              <div className="px-md-5 mt-3">
                 <Link className="list-1 d-flex pt-2 ">
                   <span>
                     <IoCall />
