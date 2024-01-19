@@ -2,8 +2,10 @@ import express from "express";
 import morgan from "morgan";
 import colors from "colors";
 import dotenv from "dotenv";
+import ConnectDb from "./config/db.js";
 
 dotenv.config();
+ConnectDb();
 const app = express();
 
 app.use(morgan("common"));

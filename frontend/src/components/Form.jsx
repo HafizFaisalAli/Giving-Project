@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Form = () => {
   const [userData, setUserData] = useState({
+    type: "",
     amount: 0,
     fullName: "",
     email: "",
@@ -111,6 +112,7 @@ const Form = () => {
           <button
             type="submit"
             className=" btn btn-outline-danger text-dark fw-bold text-uppercase"
+            onClick={setUserData(userData.type="zakat")}
           >
             Donate Now
           </button>
