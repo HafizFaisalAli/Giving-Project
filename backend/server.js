@@ -3,6 +3,7 @@ import morgan from "morgan";
 import colors from "colors";
 import dotenv from "dotenv";
 import ConnectDb from "./config/db.js";
+import authRoutes from "./routes/auth.js";
 
 dotenv.config();
 ConnectDb();
@@ -13,6 +14,7 @@ app.use(morgan("common"));
 app.get("/api", (req, res) => {
   res.json({ message: "Server running Success Fullay" });
 });
+app.use("/api/auth", authRoutes);
 
 const port = process.env.NODE_PORT | 5555;
 

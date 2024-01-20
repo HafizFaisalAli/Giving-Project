@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import {
   Homepage,
   Zakatpage,
@@ -12,6 +12,8 @@ import {
   PayNow,
 } from "./pages/PagesExport";
 import DefaultLayout from "./Layouts/DefaultLayout";
+import Login from "./pages/auth/Login";
+import AdminLayout from './Layouts/AdminLayout'
 
 const routes = createBrowserRouter([
   {
@@ -59,6 +61,14 @@ const routes = createBrowserRouter([
         element: <PayNow />,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/admin",
+    element: <AdminLayout />,
   },
 ]);
 
