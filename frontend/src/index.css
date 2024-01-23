@@ -55,9 +55,6 @@
 .calculator {
   box-shadow: 0 0 18px rgba(0, 0, 0,  0.66);
 }
-.login{
-  height: 100vh;
-}
 @media (max-width: 991px) {
   .setting {
     display: flex;

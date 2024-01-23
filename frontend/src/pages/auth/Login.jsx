@@ -1,31 +1,46 @@
-import React from "react";
-import * as yop from "yup";
+import React, { useState } from "react";
+import apiClient from "../../services/apiservice";
 
-const validationSchema = yup.object().shape({
-  email: yup
-    .string()
-    .required("Email is required.")
-    .email("Please enter a valid email"),
-  password: yup
-    .string()
-    .required("Password is required")
-    .min(6, "Password should be atleast 6 charactor long")
-    .max(20, "Password should be atmost 20 charactor long")
-    .matches(/[a-z]/, "Password should contain atleast one lowercase")
-    .matches(/[A-Z]/, "Password should contain atleast one uppercase")
-    .matches(/[0-9]/, "Password should contain atleast one numaric"),
-});
 const Login = () => {
-  const handleSubmit = (e) => {
-     e.preventDefault();
-     if (validationSchema){
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({});
 
-     }
+  const validationSchema = () => {
+    const newErrors = {};
+    if (!email.includes("@")) {
+      newErrors.email = "Please enter valid email.";
+    } else if (email.length === 0) {
+      newErrors.email = "Please enter your email first";
+    } else if (password.length < 3) {
+      newErrors.password = "Password most be at least 5 characters";
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const isValid = validationSchema();
+    if (isValid) {
+      try {
+        const response = await apiClient.post("/auth/login", {
+          email,
+          password,
+        });
+        console.log(response.data);
+      } catch (err) {
+        const message = err.response.data
+          ? err.response.data.message
+          : err.message;
+        setErrors(message);
+      }
+    }
   };
 
   return (
     <>
-      <div className="bg-secondary login d-flex align-items-center">
+      <div className="bg-secondary vh-100 d-flex align-items-center">
         <div className="container">
           <div className="row justify-content-center ">
             <div className="col-6 ">
@@ -37,6 +52,7 @@ const Login = () => {
                 </div>
                 <div className="card-body">
                   <form action="" onSubmit={handleSubmit}>
+                    <div className="text-danger"> {errors.email}</div>
                     <div>
                       <label htmlFor="email" className="form-label">
                         Email:
@@ -47,6 +63,8 @@ const Login = () => {
                         id="email"
                         placeholder="Enter your email"
                         className="form-control"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                       />
                     </div>
                     <div className="mt-2">
@@ -59,7 +77,10 @@ const Login = () => {
                         id="password"
                         placeholder="Enter your password"
                         className="form-control"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                       />
+                      <div className="text-danger"> {errors.password}</div>
                     </div>
                     <div className="d-grid mt-3 mb-2">
                       <button className="btn btn-primary ">Login</button>
