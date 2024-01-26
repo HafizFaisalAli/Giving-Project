@@ -8,6 +8,8 @@ import DonateZakat from "./DonateZakat";
 import ZakatCalculator from "./ZakatCalculator";
 import TithCalculator from "./TithCalculator";
 import PayNow from "./PayNow";
+import Admin from "./auth/Admin";
+
 export {
   Homepage,
   Zakatpage,
@@ -19,4 +21,5 @@ export {
   ZakatCalculator,
   TithCalculator,
   PayNow,
+  Admin,
 };
