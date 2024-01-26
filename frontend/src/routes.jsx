@@ -10,10 +10,11 @@ import {
   ZakatCalculator,
   TithCalculator,
   PayNow,
+  Admin,
 } from "./pages/PagesExport";
 import DefaultLayout from "./Layouts/DefaultLayout";
 import Login from "./pages/auth/Login";
-import AdminLayout from './Layouts/AdminLayout'
+import AdminLayout from "./Layouts/AdminLayout";
 
 const routes = createBrowserRouter([
   {
@@ -63,12 +64,22 @@ const routes = createBrowserRouter([
     ],
   },
   {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/admin",
+    path: "/auth",
     element: <AdminLayout />,
+    children: [
+      {
+        index: true,
+        element: <Navigate to="login" />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "dashboard",
+        element: <Admin />,
+      },
+    ],
   },
 ]);
 

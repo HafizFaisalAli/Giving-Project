@@ -1,14 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../images/withoutbg.png";
 import Button from "../components/Button";
-const scrollToTop = () => {
-  windows.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-};
+import { useSelector } from "react-redux";
+
 const Navbar = () => {
+  const { userInfo } = useSelector((state) => state.auth);
+  const navigate = useNavigate();
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const handleLogout = () => {
+    dispatch(removeUserInfo());
+    navigate("/");
+  };
   return (
     <>
       <nav className="navbar fixed-top navbar-expand-lg navbar-light navbarcolor ">
@@ -69,6 +79,20 @@ const Navbar = () => {
                   Tithing
                 </Link>
               </li>
+              {userInfo ? (
+                <li className="nav-item">
+                  <Link
+                    to="/auth/dashboard"
+                    className="nav-link text-danger mx-2"
+                    onClick={scrollToTop}
+                    aria-current="page"
+                  >
+                    Dashboard
+                  </Link>
+                </li>
+              ) : (
+                <li></li>
+              )}
             </ul>
             <Button />
           </div>

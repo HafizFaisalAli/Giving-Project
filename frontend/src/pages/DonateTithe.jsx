@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import donatetithe from "../images/Donate-tithe.jpg";
+import { useDispatch } from "react-redux";
+import { addDonateInfo } from "../redux/slices/donateSlice";
 
 const DonateTithe = () => {
   const [userData, setUserData] = useState({
@@ -11,11 +13,14 @@ const DonateTithe = () => {
   });
 
   const [errors, setErrors] = useState({});
-
+  const location = useLocation();
   const amountRef = useRef();
   const fullNameRef = useRef();
   const emailRef = useRef();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const org = location.state;
 
   const validateFrom = () => {
     const newErrors = {};
@@ -45,9 +50,18 @@ const DonateTithe = () => {
     setUserData((prevInputs) => ({ ...prevInputs, [name]: value }));
   };
 
+  const payload = {
+    type: userData.type,
+    org: org,
+    amount: userData.amount,
+    fullName: userData.fullName,
+    email: userData.email,
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateFrom()) {
+      dispatch(addDonateInfo(payload));
       navigate("/pay-now");
     } else {
       console.log("Form has validations errors");
@@ -74,8 +88,9 @@ const DonateTithe = () => {
               Donate Tithe
             </h4>
             <p className="text-secondary text-uppercase text-center mt-4">
-              Donation Amount
+              {org}
             </p>
+
             <form onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="amount" className="form-label text-uppercase">

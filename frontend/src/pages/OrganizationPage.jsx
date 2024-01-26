@@ -1,18 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import zakatfoundation from "../images/Zakatfoundation.png";
 import caritasfoundation from "../images/Caritasimage.png";
 import zakatorg1 from "../images/zakatorg1.png";
 import zakatorg2 from "../images/zakatorg2.jpeg";
 import titheorg1 from "../images/tithingorg1.png";
 import titheorg2 from "../images/titheorg2.jpg";
-const scrollToTop = () => {
-  windows.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-};
+
 const OrganizationPage = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="container mb-5">
@@ -26,10 +23,11 @@ const OrganizationPage = () => {
             <h3 className="text-danger text-center mb-5 text-uppercase">
               Donate Zakat
             </h3>
-            <Link
-              to="/donate-zakat"
-              className="text-danger text-decoration-none my-3"
-              onClick={scrollToTop}
+            <div
+              onClick={() =>
+                navigate("/donate-zakat", { state: "Zakat Foundation" })
+              }
+              className="text-danger text-decoration-none my-3 cursor-pointer"
             >
               <div className="d-flex">
                 <img
@@ -49,17 +47,18 @@ const OrganizationPage = () => {
                   </p>
                 </div>
               </div>
-            </Link>
-            <Link
-              to="/donate-zakat"
-              className="text-danger text-decoration-none mx-3"
-              onClick={scrollToTop}
+            </div>
+            <div
+              onClick={() =>
+                navigate("/donate-zakat", { state: "Shaukat Khanum" })
+              }
+              className="text-danger text-decoration-none my-3 cursor-pointer"
             >
               <div className="d-flex">
                 <img
                   className="rounded-circle border border-3 border-danger"
                   src={zakatorg1}
-                  alt="Zakat foundation"
+                  alt="Shaukat Khanum"
                   height={150}
                   width={150}
                 />
@@ -73,17 +72,18 @@ const OrganizationPage = () => {
                   </p>
                 </div>
               </div>
-            </Link>
-            <Link
-              to="/donate-zakat"
-              className="text-danger text-decoration-none mx-3"
-              onClick={scrollToTop}
+            </div>
+            <div
+              onClick={() =>
+                navigate("/donate-zakat", { state: "Siut Donate" })
+              }
+              className="text-danger text-decoration-none my-3 cursor-pointer"
             >
               <div className="d-flex">
                 <img
                   className="rounded-circle border border-3 border-danger"
                   src={zakatorg2}
-                  alt="Zakat foundation"
+                  alt="Siut Donate"
                   height={150}
                   width={150}
                 />
@@ -96,16 +96,17 @@ const OrganizationPage = () => {
                   </p>
                 </div>
               </div>
-            </Link>
+            </div>
           </div>
           <div className="col-md-6">
             <h3 className="text-danger text-center mb-5 text-uppercase">
               Donate Tithe
             </h3>
-            <Link
-              to="/donate-tithe"
-              className="text-danger text-decoration-none my-3"
-              onClick={scrollToTop}
+            <div
+              onClick={() =>
+                navigate("/donate-tithe", { state: "Caritas Foundation" })
+              }
+              className="text-danger text-decoration-none my-3 cursor-pointer"
             >
               <div className="d-flex">
                 <img
@@ -124,49 +125,51 @@ const OrganizationPage = () => {
                   </p>
                 </div>
               </div>
-            </Link>
-            <Link
-              to="/donate-tithe"
-              className="text-danger text-decoration-none mx-3"
-              onClick={scrollToTop}
+            </div>
+            <div
+              onClick={() =>
+                navigate("/donate-tithe", { state: "Sprituis Helping" })
+              }
+              className="text-danger text-decoration-none my-3 cursor-pointer"
             >
               <div className="d-flex">
                 <img
                   className="rounded-circle border border-3 border-danger"
                   src={titheorg1}
-                  alt="caritas foundation"
+                  alt="Sprituis Helping"
                   height={150}
                   width={150}
                 />
                 <div className="ms-3 mt-3">
                   <h4 className="text-uppercase mt-3 text-secondary ">
-                    Sprituis helping
+                    Sprituis Helping
                   </h4>
                   <p className="text-dark">We are Habitat for Humanity.</p>
                 </div>
               </div>
-            </Link>
-            <Link
-              to="/donate-tithe"
-              className="text-danger text-decoration-none mx-3"
-              onClick={scrollToTop}
+            </div>
+            <div
+              onClick={() =>
+                navigate("/donate-tithe", { state: "Tithing Partners" })
+              }
+              className="text-danger text-decoration-none my-3 cursor-pointer"
             >
               <div className="d-flex">
                 <img
                   className="rounded-circle border border-3 border-danger"
                   src={titheorg2}
-                  alt="caritas foundation"
+                  alt="Tithing Partners"
                   height={150}
                   width={150}
                 />
                 <div className="ms-3 mt-3">
                   <h4 className="text-uppercase mt-3 text-secondary">
-                    Tithing partners
+                    Tithing Partners
                   </h4>
                   <p className="text-dark">We Give Because We Get it.</p>
                 </div>
               </div>
-            </Link>
+            </div>
           </div>
         </div>
       </div>

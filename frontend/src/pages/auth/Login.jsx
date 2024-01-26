@@ -1,10 +1,26 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import apiClient from "../../services/apiservice";
+import { tailspin } from "ldrs";
+import { addUserInfo } from "../../redux/slices/authSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
+  const [serverError, setServerError] = useState("");
+  const [loading, setLoading] = useState(false);
+  tailspin.register();
+  const { userInfo } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (userInfo && userInfo.email) {
+      navigate("/auth/dashboard");
+    }
+  }, [userInfo, navigate]);
 
   const validationSchema = () => {
     const newErrors = {};
@@ -24,75 +40,95 @@ const Login = () => {
     const isValid = validationSchema();
     if (isValid) {
       try {
-        const response = await apiClient.post("/auth/login", {
+        setLoading(true);
+        const { data } = await apiClient.post("/auth/login", {
           email,
           password,
         });
-        console.log(response.data);
+        dispatch(addUserInfo(data));
+        console.log("Login successful:", data);
       } catch (err) {
-        const message = err.response.data
-          ? err.response.data.message
-          : err.message;
-        setErrors(message);
+        console.log(err);
+        if (err.message) {
+          setServerError("Invalid Email or Password.");
+        }
+      } finally {
+        setLoading(false);
       }
     }
   };
 
   return (
-    <>
-      <div className="bg-secondary vh-100 d-flex align-items-center">
-        <div className="container">
-          <div className="row justify-content-center ">
-            <div className="col-6 ">
-              <div className="card">
-                <div className="card-header">
-                  <div className="card-title text-center fs-4 fw-bold">
-                    Login
-                  </div>
+    <div className="bg-secondary vh-100 d-flex align-items-center">
+      <div className="container">
+        <div className="row justify-content-center ">
+          <div className="col-5 ">
+            <div className="card">
+              <div className="card-header">
+                <div className="card-title text-center fs-4 text-secondary">
+                  Login
                 </div>
-                <div className="card-body">
-                  <form action="" onSubmit={handleSubmit}>
+              </div>
+              <div className="card-body">
+                <div className="text-center text-danger">{serverError} </div>
+                <form action="" onSubmit={handleSubmit}>
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="form-label text-secondary"
+                    >
+                      Email:
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Enter your email"
+                      className="form-control"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
                     <div className="text-danger"> {errors.email}</div>
-                    <div>
-                      <label htmlFor="email" className="form-label">
-                        Email:
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="Enter your email"
-                        className="form-control"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                      />
-                    </div>
-                    <div className="mt-2">
-                      <label htmlFor="password" className="form-label">
-                        Password:
-                      </label>
-                      <input
-                        type="password"
-                        name="password"
-                        id="password"
-                        placeholder="Enter your password"
-                        className="form-control"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                      />
-                      <div className="text-danger"> {errors.password}</div>
-                    </div>
-                    <div className="d-grid mt-3 mb-2">
-                      <button className="btn btn-primary ">Login</button>
-                    </div>
-                  </form>
-                </div>
+                  </div>
+                  <div className="mt-2">
+                    <label
+                      htmlFor="password"
+                      className="form-label text-secondary"
+                    >
+                      Password:
+                    </label>
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      placeholder="Enter your password"
+                      className="form-control"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <div className="text-danger"> {errors.password}</div>
+                  </div>
+                  <div className="mt-3 mb-2">
+                    <button className="btn btn-primary px-5">
+                      {loading ? (
+                        <l-tailspin
+                          size="30"
+                          stroke="5"
+                          speed="0.9"
+                          color="white"
+                        ></l-tailspin>
+                      ) : (
+                        "Login"
+                      )}
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
