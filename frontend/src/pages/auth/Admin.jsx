@@ -60,7 +60,7 @@ const Admin = () => {
                       <Link
                         to="/"
                         className="text-decoration-none text-dark fs-5 mt-2"
-                        data-bs-dismiss="offcanvas"
+                       
                       >
                         Home
                       </Link>
