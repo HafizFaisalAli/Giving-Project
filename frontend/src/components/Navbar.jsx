@@ -15,10 +15,6 @@ const Navbar = () => {
     });
   };
 
-  const handleLogout = () => {
-    dispatch(removeUserInfo());
-    navigate("/");
-  };
   return (
     <>
       <nav className="navbar fixed-top navbar-expand-lg navbar-light navbarcolor ">

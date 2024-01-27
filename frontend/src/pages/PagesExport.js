@@ -10,6 +10,7 @@ import TithCalculator from "./TithCalculator";
 import PayNow from "./PayNow";
 import Admin from "./auth/Admin";
 
+
 export {
   Homepage,
   Zakatpage,

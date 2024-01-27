@@ -15,11 +15,14 @@ import {
 import DefaultLayout from "./Layouts/DefaultLayout";
 import Login from "./pages/auth/Login";
 import AdminLayout from "./Layouts/AdminLayout";
+import AuthLayout from "./Layouts/AuthLayout";
+import NotFound from "./components/NotFound";
 
 const routes = createBrowserRouter([
   {
     path: "/",
     element: <DefaultLayout />,
+    errorElement: <NotFound/>,
     children: [
       {
         index: true,
@@ -64,8 +67,24 @@ const routes = createBrowserRouter([
     ],
   },
   {
-    path: "/auth",
+    path: "/admin",
     element: <AdminLayout />,
+    errorElement: <NotFound/>,
+    children: [
+      {
+        index: true,
+        element: <Navigate to="dashboard" />,
+      },
+      {
+        path: "dashboard",
+        element: <Admin />,
+      },
+    ],
+  },
+  {
+    path: "/auth",
+    element: <AuthLayout />,
+    errorElement: <NotFound/>,
     children: [
       {
         index: true,

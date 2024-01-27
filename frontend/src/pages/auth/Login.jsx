@@ -18,7 +18,7 @@ const Login = () => {
 
   useEffect(() => {
     if (userInfo && userInfo.email) {
-      navigate("/auth/dashboard");
+      navigate("/admin/dashboard");
     }
   }, [userInfo, navigate]);
 

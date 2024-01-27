@@ -3,7 +3,9 @@ import { Outlet } from "react-router-dom";
 const AdminLayout = () => {
   return (
     <>
-      <Outlet />
+      <div className="dashboard-bg-image">
+        <Outlet />
+      </div>
     </>
   );
 };
