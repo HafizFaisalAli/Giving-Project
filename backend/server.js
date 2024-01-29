@@ -4,6 +4,7 @@ import colors from "colors";
 import dotenv from "dotenv";
 import ConnectDb from "./config/db.js";
 import authRoutes from "./routes/auth.js";
+import donateRouter from "./routes/donate.js";
 
 dotenv.config();
 ConnectDb();
@@ -16,6 +17,7 @@ app.get("/api", (req, res) => {
   res.json({ message: "Server running Success Fullay" });
 });
 app.use("/api/auth", authRoutes);
+app.use("/api/donate", donateRouter);
 
 const port = process.env.NODE_PORT | 5555;
 

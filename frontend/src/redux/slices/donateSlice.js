@@ -23,9 +23,13 @@ const donate = createSlice({
       state.donationInfo = payload;
       localStorage.setItem(donationInfoName, JSON.stringify(payload));
     },
+    emptyDonate: (state) => {
+      state.donationInfo = [];
+      localStorage.setItem(donationInfoName, []);
+    },
   },
 });
 
-export const { addDonateInfo } = donate.actions;
+export const { addDonateInfo, emptyDonate } = donate.actions;
 
 export default donate.reducer;

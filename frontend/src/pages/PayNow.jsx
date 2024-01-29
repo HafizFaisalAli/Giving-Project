@@ -4,6 +4,7 @@ import StripeContainer from "../components/StripeContainer";
 
 const PayNow = () => {
   const { donationInfo } = useSelector((state) => state.donate);
+
   return (
     <>
       <div className="container mt-5 pt-5">
