@@ -17,12 +17,13 @@ import Login from "./pages/auth/Login";
 import AdminLayout from "./Layouts/AdminLayout";
 import AuthLayout from "./Layouts/AuthLayout";
 import NotFound from "./components/NotFound";
+import DonationDone from "./pages/DonationDone";
 
 const routes = createBrowserRouter([
   {
     path: "/",
     element: <DefaultLayout />,
-    errorElement: <NotFound/>,
+    errorElement: <NotFound />,
     children: [
       {
         index: true,
@@ -69,7 +70,7 @@ const routes = createBrowserRouter([
   {
     path: "/admin",
     element: <AdminLayout />,
-    errorElement: <NotFound/>,
+    errorElement: <NotFound />,
     children: [
       {
         index: true,
@@ -84,7 +85,7 @@ const routes = createBrowserRouter([
   {
     path: "/auth",
     element: <AuthLayout />,
-    errorElement: <NotFound/>,
+    errorElement: <NotFound />,
     children: [
       {
         index: true,
@@ -99,6 +100,10 @@ const routes = createBrowserRouter([
         element: <Admin />,
       },
     ],
+  },
+  {
+    path: "/donatesuccess",
+    element: <DonationDone />
   },
 ]);
 

@@ -10,11 +10,11 @@ const donate = createSlice({
   initialState,
   reducers: {
     donateCreated: (state, { payload }) => {
-      state.donateId = payload;
+      state.newDonate = payload;
       state.success = true;
     },
     resetDonate: (state) => {
-      state.donateId = null;
+      state.newDonate = null;
       state.success = false;
     },
   },

@@ -10,6 +10,7 @@ import { useSelector, useDispatch } from "react-redux";
 import apiClient from "../services/apiservice";
 import { donateCreated } from "../redux/slices/newDante";
 import { emptyDonate } from "../redux/slices/donateSlice";
+
 const StripeForm = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -53,6 +54,7 @@ const StripeForm = () => {
       console.log(data);
       dispatch(donateCreated(data)); 
       dispatch(emptyDonate());
+
     } catch (err) {
       if (err.response && err.response.data && err.response.data.message) {
         setError(err.response.data.message);

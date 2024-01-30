@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { removeUserInfo } from "../../redux/slices/authSlice";
 import logo from "../../images/withoutbg.png";
 import { FaBars } from "react-icons/fa6";
 import NotFound from "../../components/NotFound";
+import apiClient from "../../services/apiservice";
 
 const Admin = () => {
   const { userInfo } = useSelector((state) => state.auth);
@@ -14,15 +15,40 @@ const Admin = () => {
     dispatch(removeUserInfo());
     navigate("/");
   };
+  const [data, setData] = useState(["ali"]);
+
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    getData();
+  }, []);
+  const getData = async () => {
+    setLoading(true);
+    try {
+      const { data } = await apiClient.get("/donate");
+      setData(data);
+      console.log(data);
+      // const { data: donateData } = await apiClient.get("/donate");
+      // setData(donateData.donates);
+      // console.log(donateData.donates);
+      // setLoading(false);
+    } catch (error) {
+      console.log(error.message);
+      setError(error);
+      setLoading(false);
+    }
+  };
+
   return (
     <>
-      {userInfo ? (
-        <div className="container">
-          <div className="row">
-            <div className="col">
-              <div>
-                <button
-                  Name="btn btn-primary"
+      {/* {userInfo ? ( */}
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <div>
+              {/* <button
+                  name="btn btn-primary"
                   className="btn border-0 shadow-none"
                   type="button"
                   data-bs-toggle="offcanvas"
@@ -39,7 +65,7 @@ const Admin = () => {
                 </button>
                 <div
                   className="offcanvas offcanvas-start"
-                  tabindex="-1"
+                  tabIndex="-1"
                   id="offcanvasExample"
                   aria-labelledby="offcanvasExampleLabel"
                 >
@@ -60,7 +86,6 @@ const Admin = () => {
                       <Link
                         to="/"
                         className="text-decoration-none text-dark fs-5 mt-2"
-                       
                       >
                         Home
                       </Link>
@@ -94,14 +119,24 @@ const Admin = () => {
                       </Link>
                     </div>
                   </div>
-                </div>
+                </div> */}
+              <div>
+                {/* {console.log({ data: data. })} */}
+                {/* {loading ? <p>Loading...</p> : <p>{data.length}</p>} */}
+                {error && <p>Error: {error}</p>}
+                {data.map((donerInfo) => (
+                  <ul key={donerInfo._id}>
+                    <li>Hellod</li>
+                  </ul>
+                ))}
               </div>
             </div>
           </div>
         </div>
-      ) : (
-        <NotFound />
-      )}
+      </div>
+      {/* ) : ( */}
+      {/* <NotFound /> */}
+      {/* )} */}
     </>
   );
 };

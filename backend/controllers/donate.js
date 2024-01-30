@@ -7,14 +7,9 @@ export const newDonate = asyncHandler(async (req, res) => {
     "sk_test_51Odyx7IchGlJTdF35Ni16hsLpaZBdK214s0S3RJveYpXGemaMkHhLkZfAzV9ilB4XihuEk8FO88bitYCC8lP83Pm00QdLVDsjz"
   );
   const { donerInfo, paymentMethod } = req.body;
-
-  const amountInCents = donerInfo.amount * 100000;
-
-  console.log("Amount in cents:", amountInCents);
-
   try {
     const paymentIntent = await stripe.paymentIntents.create({
-      amount: amountInCents,
+      amount: donerInfo.amount * 100,
       currency: "PKR",
       confirm: true,
       payment_method: paymentMethod.id,
@@ -39,6 +34,13 @@ export const newDonate = asyncHandler(async (req, res) => {
   const createdDonation = await donate.save();
 
   res.status(201).json({
-    donationDetails: createdDonation,
+    donerName: createdDonation.donerInfo.fullName,
+    donateAmount: createdDonation.donerInfo.amount,
+    donatetype: createdDonation.donerInfo.type,
   });
+});
+
+export const getAllDonates = asyncHandler(async (req, res) => {
+  const donates = await Donate.find().sort({ createdAt: -1 });
+  res.json({ donates });
 });

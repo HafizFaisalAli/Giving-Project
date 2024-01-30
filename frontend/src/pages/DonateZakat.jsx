@@ -23,8 +23,8 @@ const DonateZakat = () => {
 
   const validateFrom = () => {
     const newErrors = {};
-    if (userData.amount < 1) {
-      newErrors.amount = "Donation amount must be greater then 1.";
+    if (userData.amount < 140) {
+      newErrors.amount = "Donation amount must be greater then 140.";
       amountRef.current.focus();
     } else if (userData.fullName.length === 0) {
       newErrors.fullName = "Please enter your name first.";
@@ -47,7 +47,7 @@ const DonateZakat = () => {
     const { name, value } = e.target;
     setErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
     setUserData((prevInputs) => ({ ...prevInputs, [name]: value }));
-  };
+  }; 
   const payload = {
     type: userData.type,
     org: org,
