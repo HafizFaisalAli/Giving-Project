@@ -2,6 +2,10 @@ import mongoose from "mongoose";
 
 const donateSchema = new mongoose.Schema(
   {
+    isPaid: {
+      type: Boolean,
+      defaut: false,
+    },
     donerInfo: {
       type: {
         type: String,

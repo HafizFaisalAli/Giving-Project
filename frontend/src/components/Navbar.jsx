@@ -78,7 +78,7 @@ const Navbar = () => {
               {userInfo ? (
                 <li className="nav-item">
                   <Link
-                    to="/auth/dashboard"
+                    to="/admin/dashboard"
                     className="nav-link text-danger mx-2"
                     onClick={scrollToTop}
                     aria-current="page"

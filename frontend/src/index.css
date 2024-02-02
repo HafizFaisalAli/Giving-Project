@@ -14,7 +14,17 @@
 .footerbg {
   background-color: black;
 }
-
+.scroll-style-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scroll-style-none::-webkit-scrollbar {
+  width: 0;
+}
+.accordion-min-height {
+  max-height: 500px;
+  overflow-y: scroll;
+}
 /* .item a {
   text-decoration: none;
   color: red;
@@ -42,7 +52,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 100%;
+  background-attachment: fixed;
 }
 .topimage {
   background-image: url("./images/aboutusf.png");

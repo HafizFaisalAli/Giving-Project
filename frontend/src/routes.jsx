@@ -18,6 +18,9 @@ import AdminLayout from "./Layouts/AdminLayout";
 import AuthLayout from "./Layouts/AuthLayout";
 import NotFound from "./components/NotFound";
 import DonationDone from "./pages/DonationDone";
+import TotalDonate from "./pages/admin/TotalDonation";
+import DonationZakat from "./pages/admin/DonationZakat";
+import DonationTithe from "./pages/admin/DonationTithe";
 
 const routes = createBrowserRouter([
   {
@@ -80,6 +83,18 @@ const routes = createBrowserRouter([
         path: "dashboard",
         element: <Admin />,
       },
+      {
+        path: "donatezakat",
+        element: <DonationZakat/>,
+      },
+      {
+        path: "donatetithe",
+        element: <DonationTithe />,
+      },
+      {
+        path: "total",
+        element: <TotalDonate />,
+      },
     ],
   },
   {
@@ -95,15 +110,11 @@ const routes = createBrowserRouter([
         path: "login",
         element: <Login />,
       },
-      {
-        path: "dashboard",
-        element: <Admin />,
-      },
     ],
   },
   {
     path: "/donatesuccess",
-    element: <DonationDone />
+    element: <DonationDone />,
   },
 ]);
 
