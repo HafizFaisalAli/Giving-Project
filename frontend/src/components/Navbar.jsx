@@ -20,7 +20,7 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg fixed-top navbarcolor shadow">
         <div className="container">
           <Link to="/" className="navbar-brand text-danger fs-3">
-            <img src={logo} alt="getfollowerlogo" width={50} /> Giving
+            <img src={logo} alt="getfollowerlogo" width={60} height={50}/> Giving
           </Link>
           <button
             className="navbar-toggler shadow-none border-0"
@@ -41,7 +41,7 @@ const Navbar = () => {
             <div className="offcanvas-header">
               <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
                 <Link to="/" className="navbar-brand text-danger fs-3">
-                  <img src={logo} alt="getfollowerlogo" width={50} /> Giving
+                  <img src={logo} alt="getfollowerlogo" width={60} height={50} /> Giving
                 </Link>
               </h5>
               <button
@@ -52,7 +52,7 @@ const Navbar = () => {
               ></button>
             </div>
             <div className="offcanvas-body">
-              <ul className="navbar-nav justify-content-end fs-5 flex-grow-1 pt-2 ">
+              <ul className="navbar-nav justify-content-center fs-5 flex-grow-1 pt-2">
                 <li
                   className="nav-item"
                   data-bs-dismiss="offcanvas"
@@ -126,8 +126,9 @@ const Navbar = () => {
                 ) : (
                   <li></li>
                 )}
+              </ul>
                  <li
-                  className="nav-item mt-1 ms-3"
+                  className="nav-item mt-2 ms-3"
                   data-bs-dismiss="offcanvas"
                   onClick={scrollToTop}
                 >
@@ -140,7 +141,6 @@ const Navbar = () => {
                     </button>
                   </Link>
                 </li>
-              </ul>
             </div>
           </div>
         </div>
