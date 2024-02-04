@@ -39,7 +39,7 @@ const PayNow = () => {
                 </p>
               </div>
             </div>
-            <div className="col-md-6 mt-5">
+            <div className="col-md-6 mt-md-5 mt-3 mb-md-0 mb-5">
               <StripeContainer />
             </div>
           </div>

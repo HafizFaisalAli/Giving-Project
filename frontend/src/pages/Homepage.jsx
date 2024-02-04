@@ -1,6 +1,6 @@
 import React from "react";
 import zakatimg from "../images/Zakatgiving.jpg";
-import Tithegive from "../images/Untitled design (1).png";
+import Tithegive from "../images/sliderimg3.jpg";
 import oldage from "../images/Untitled design (2).png";
 import zakatslide from "../images/Untitled design (3).png";
 import zakatsliders from "../images/Untitled design.png";

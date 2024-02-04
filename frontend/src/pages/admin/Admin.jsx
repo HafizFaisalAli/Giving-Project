@@ -23,7 +23,7 @@ const Admin = () => {
       .finally(() => setLoading(false));
   }, []);
   const donate = data.donates;
-  console.log(donate);
+
   if (loading) return <Loading />;
   return (
     <>
