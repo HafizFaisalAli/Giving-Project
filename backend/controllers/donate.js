@@ -26,7 +26,11 @@ export const newDonate = asyncHandler(async (req, res) => {
   }
 
   const donate = new Donate({
-    donerInfo,
+    fullName: donerInfo.fullName,
+    email: donerInfo.email,
+    org: donerInfo.org,
+    amount: donerInfo.amount,
+    type: donerInfo.type,
     paymentMethod,
     isPaid: true,
     paidAt: new Date(),
@@ -34,9 +38,9 @@ export const newDonate = asyncHandler(async (req, res) => {
   const createdDonation = await donate.save();
 
   res.status(201).json({
-    donerName: createdDonation.donerInfo.fullName,
-    donateAmount: createdDonation.donerInfo.amount,
-    donatetype: createdDonation.donerInfo.type,
+    donerName: createdDonation.fullName,
+    donateAmount: createdDonation.amount,
+    donatetype: createdDonation.type,
   });
 });
 

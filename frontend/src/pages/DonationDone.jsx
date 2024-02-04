@@ -8,7 +8,6 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 const DonationDone = () => {
   const dispatch = useDispatch();
   const { newDonate } = useSelector((state) => state.doner);
-
   return (
     <>
       {newDonate ? (

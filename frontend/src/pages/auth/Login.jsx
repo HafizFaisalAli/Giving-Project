@@ -46,7 +46,6 @@ const Login = () => {
           password,
         });
         dispatch(addUserInfo(data));
-        console.log("Login successful:", data);
       } catch (err) {
         console.log(err);
         if (err.message) {
