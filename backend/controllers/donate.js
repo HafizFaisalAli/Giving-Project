@@ -1,6 +1,32 @@
 import asyncHandler from "express-async-handler";
 import Donate from "../models/donate.js";
 import Stripe from "stripe";
+import nodemailer from "nodemailer";
+
+const sendDonationEmail = async (donerInfo) => {
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "fgraphicart786@gmail.com",
+      pass: "raxx nzoi orrp txgj",
+    },
+  });
+
+  const mailOptions = {
+    from: "fgraphicart786@gmail.com",
+    to: donerInfo.email,
+    subject: "Donation Confirmation",
+    text: `Thank you for your donation, ${donerInfo.fullName}! 
+You donated ${donerInfo.amount} PKR to ${donerInfo.org}.`,
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    console.log("Email sent successfully");
+  } catch (error) {
+    console.error("Email sending failed:", error);
+  }
+};
 
 export const newDonate = asyncHandler(async (req, res) => {
   const stripe = new Stripe(
@@ -36,6 +62,8 @@ export const newDonate = asyncHandler(async (req, res) => {
     paidAt: new Date(),
   });
   const createdDonation = await donate.save();
+
+  await sendDonationEmail(donerInfo);
 
   res.status(201).json({
     donerName: createdDonation.fullName,
