@@ -7,8 +7,8 @@ const sendDonationEmail = async (donerInfo) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "fgraphicart786@gmail.com",
-      pass: "raxx nzoi orrp txgj",
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMIAL_PASSWOED,
     },
   });
 
