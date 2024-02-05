@@ -16,7 +16,7 @@ app.use(morgan("common"));
 app.use(express.json());
 
 app.get("/api", (req, res) => {
-  res.json({ message: "Server running Success Fullay" });
+  res.json({ message: "Server running Successfully" });
 });
 app.use("/api/auth", authRoutes);
 app.use("/api/donate", donateRouter);

@@ -1,9 +1,9 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 import tithebymoney from "../images/Untitled design (2).png";
 import oldage from "../images/Untitled design (3).png";
 import tithbyfood from "../images/Untitled design (6).png";
+
 const scrollToTop = () => {
   faWindows.scrollTo({
     top: 0,

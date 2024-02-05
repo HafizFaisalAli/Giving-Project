@@ -5,6 +5,8 @@ import oldage from "../images/Untitled design (2).png";
 import zakatslide from "../images/Untitled design (3).png";
 import zakatsliders from "../images/Untitled design.png";
 import { Link } from "react-router-dom";
+import tithegive from "../images/tithebymoney.jpg";
+
 const scrollToTop = () => {
   windows.scrollTo({
     top: 0,
@@ -138,7 +140,7 @@ const Homepage = () => {
                 className="d-block w-100 rounded"
                 height={300}
                 width={300}
-                src={Tithegive}
+                src={tithegive}
                 alt=""
               />
             </div>
