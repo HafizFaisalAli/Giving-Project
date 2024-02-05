@@ -29,9 +29,9 @@ const TotalDonate = () => {
 
   return (
     <>
-      <div className="">
+      <div className="mt-5 py-5">
         <div className="container">
-          <div className="row vh-100 d-flex justify-content-center align-items-center">
+          <div className="row h-100 d-flex justify-content-center align-items-center">
             <div className="col-md-6">
               <div className="card shadow text-center">
                 <div className="card-header bg-primary text-light">
@@ -70,6 +70,27 @@ const TotalDonate = () => {
                             (pre, cur) => (pre += cur.amount),
                             0
                           )}
+                          PKR
+                        </span>
+                      </div>
+                    )}
+                  </h1>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-6 mt-md-3">
+              <div className="card shadow text-center">
+                <div className="card-header bg-primary text-light">
+                  <h2>Total Donation</h2>
+                </div>
+                <div className="card-body my-5 py-5">
+                  <h1>
+                    {donate && (
+                      <div>
+                        Amount:{" "}
+                        <span className="fw-light">
+                          {donate.reduce((pre, cur) => (pre += cur.amount), 0)}
                           PKR
                         </span>
                       </div>

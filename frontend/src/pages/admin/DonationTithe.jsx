@@ -30,7 +30,7 @@ const DonationTithe = () => {
     <>
       <div className="container">
         <div className="row">
-          <div className="vh-100 mt-5 pt-5">
+          <div className="h-100 mt-5 pt-5">
             <h1 className="text-center mt-5">Tithing</h1>
             <div className="my-5 border">
               <div className="d-flex flex-row justify-content-between border py-3 bg-primary text-light">
