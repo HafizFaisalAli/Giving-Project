@@ -132,13 +132,13 @@ const ZakatCalculator = () => {
               <div className="float-end mt-3 ">
                 <div className="d-flex">
                   <button
-                    className="btn btn-sm btn-outline-danger mx-1"
+                    className="btn btn-sm btn-danger mx-1"
                     onClick={calculateZakat}
                   >
                     Calculate Zakat
                   </button>
                   <button
-                    className="btn btn-sm btn-outline-danger mx-1"
+                    className="btn btn-sm btn-danger mx-1"
                     type="reset"
                     onClick={handleCancel}
                   >

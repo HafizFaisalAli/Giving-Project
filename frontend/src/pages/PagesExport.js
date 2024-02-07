@@ -1,26 +1,25 @@
-import Homepage from "./Homepage";
-import Zakatpage from "./Zakatpage";
-import Tithingpage from "./Tithingpage";
-import Aboutus from "./Aboutus";
+import Home from "./Home";
+import ZakatPage from "./ZakatPage";
+import TithingPage from "./Tithingpage";
+import About from "./About";
 import OrganizationPage from "./OrganizationPage";
 import DonateTithe from "./DonateTithe";
 import DonateZakat from "./DonateZakat";
 import ZakatCalculator from "./ZakatCalculator";
-import TithCalculator from "./TithCalculator";
+import TitheCalculator from "./TitheCalculator";
 import PayNow from "./PayNow";
 import Admin from "./admin/Admin";
 
-
 export {
-  Homepage,
-  Zakatpage,
-  Tithingpage,
-  Aboutus,
+  Home,
+  ZakatPage,
+  TithingPage,
+  About,
   OrganizationPage,
   DonateZakat,
   DonateTithe,
   ZakatCalculator,
-  TithCalculator,
+  TitheCalculator,
   PayNow,
   Admin,
 };

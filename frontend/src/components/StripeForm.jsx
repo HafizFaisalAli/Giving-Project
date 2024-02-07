@@ -71,33 +71,33 @@ const StripeForm = () => {
       <div className="container">
         <div className="row">
           <div className="col">
-            <div className="card">
+            <div className="card shadow">
               <div className="card-body">
                 <form onSubmit={handleSubmit}>
                   <div className="text-center mb-4 mt-2">
-                    <h3 className="text-success">Pay Your Donation</h3>
+                    <h3 className="text-danger">Pay Your Donation</h3>
                   </div>
                   <p className="text-center text-danger">{error} </p>
                   <div className="mt-2">
-                    <label htmlFor="cardNumber" className="form-label">
+                    <label htmlFor="cardNumber" className="form-label text-secondary">
                       Enter Card Number
                     </label>
                     <CardNumberElement
-                      className="form-control"
+                      className="form-control py-2"
                       id="cardNumber"
                     />
                   </div>
                   <div className="mt-2">
-                    <label htmlFor="cardCvc" className="form-label">
+                    <label htmlFor="cardCvc" className="form-label text-secondary">
                       Enter CVC Number
                     </label>
-                    <CardCvcElement className="form-control" id="cardCvc" />
+                    <CardCvcElement className="form-control py-2" id="cardCvc" />
                   </div>
                   <div className="mt-2">
-                    <label htmlFor="cardExp" className="form-label">
+                    <label htmlFor="cardExp" className="form-label text-secondary">
                       Enter Card Exp
                     </label>
-                    <CardExpiryElement className="form-control" id="cardExp" />
+                    <CardExpiryElement className="form-control py-2" id="cardExp" />
                   </div>
                   <div className="d-grid mt-3">
                     <button className="btn btn-primary">

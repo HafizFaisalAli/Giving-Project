@@ -1,23 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import nisabimg from "../images/Untitled design (8).png";
 import zakatrate from "../images/Untitled design (9).png";
+
 const scrollToTop = () => {
+
   faWindows.scrollTo({
     top: 0,
     behavior: "smooth",
   });
 };
-const Zakatpage = () => {
+
+const ZakatPage = () => {
   return (
     <>
-      <div className="container mt-5 my-4 py-4 mt-5">
-        <div className="row  mt-5 mx-auto">
-          <div className="col-lg-12">
-            <h1 className="text-center text-uppercase">What is Zakat?</h1>
+      <div className="container my-5 py-4">
+        <div className="row">
+          <div className="col mt-5 pt-5">
+            <h1 className="text-center text-uppercase text-danger text-lg">
+              What is Zakat?
+            </h1>
             <div>
-              <p className=" text-center mt-4">
+              <p className="text-secondary text-center mt-4">
                 Zakat (zakaat, zakah) is one of the five pillars of Islam and a
                 form of obligatory charity. This means that each Muslim is
                 obliged to pay their Zakat throughout their lifetime, as long as
@@ -36,7 +40,7 @@ const Zakatpage = () => {
               </p>
               <div className="text-center mt-3">
                 <Link
-                  to="/ZakatCalculator"
+                  to="/zakatcalculator"
                   className="btn btn-danger text-uppercase "
                   onClick={scrollToTop}
                   href=""
@@ -57,9 +61,11 @@ const Zakatpage = () => {
         </div>
         <div className="row ">
           <div className="col-lg-12 ">
-            <h1 className="text-uppercase  text-center mt-5">Zakat al-fitr</h1>
+            <h1 className="text-uppercase text-danger text-center mt-5">
+              Zakat al-fitr
+            </h1>
             <div>
-              <p className="text-center mt-4">
+              <p className="text-secondary text-center mt-4">
                 Zakat al-Fitr is a specific form of charity given at the end of
                 Ramadan, the month of fasting in Islam. It is a mandatory
                 charitable donation made by every Muslim, regardless of wealth
@@ -75,7 +81,7 @@ const Zakatpage = () => {
         </div>
         <div className="row ">
           <div className="col-lg-12">
-            <h1 className="text-uppercase text-center  mt-5">
+            <h1 className="text-uppercase text-center text-danger mt-5">
               Who is Eligible to pay Zakat?
             </h1>
             <div className=" text-center">
@@ -84,18 +90,18 @@ const Zakatpage = () => {
                   There are four conditions that one must meet in order to be
                   eligible to pay Zakat:
                 </span>
-                <li className="mt-3">
+                <li className="mt-3 text-secondary">
                   A Muslim must have reached the age of puberty (according to
                   the Hanafi madhaab only).
                 </li>
-                <li>
+                <li className="text-secondary">
                   A Muslim must have ownership of the Nisab (minimum amount of
                   wealth) for one lunar year before paying Zakat on it.
                 </li>
-                <li>
+                <li className="text-secondary">
                   The wealth a Muslim owns must have the ability to increase.
                 </li>
-                <li>
+                <li className="text-secondary">
                   The Muslim paying Zakat must be of sound mind. A Muslim must
                   only give Zakat to those who are eligible to receive it.
                 </li>
@@ -105,11 +111,11 @@ const Zakatpage = () => {
         </div>
         <div className="row">
           <div className="col-lg-12">
-            <h1 className="text-uppercase text-center mt-5 ">
+            <h1 className="text-uppercase text-center mt-5 text-danger">
               When to pay zakat
             </h1>
             <div className="mt-3">
-              <p className="text-center">
+              <p className="text-center text-secondary">
                 You pay your Zakat when you have been in possession of the Nisab
                 (the minimum amount of personal wealth) for one lunar year.
                 <br />
@@ -123,50 +129,48 @@ const Zakatpage = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-12">
-            <h1 className="text-center mt-5 text-uppercase">
+          <div className="col">
+            <h1 className="text-center mt-5 text-uppercase text-danger">
               Who is eligible to receive Zakat?
             </h1>
-            <div className="text-center mt-3">
-              <ul>
-                <li>The poor</li>
-                <li>The needy</li>
-                <li>Administrators of Zakat</li>
-                <li>
-                  Those who have a reconciliation of heart (those who have
-                  embraced Islam or are inclined to it).
-                </li>
-                <li>Those who have been enslaved</li>
-                <li>Those in debt</li>
-                <li>In the cause of God</li>
-                <li>Travellers (including refugees)</li>
+            <div className="text-center mt-3 text-secondary">
+              The poor ,The needy ,Administrators of Zakat , Those who have a{" "}
+              <br />
+              reconciliation of heart (those who have embraced <br /> Islam or
+              are inclined to it). <br /> Those who have been enslaved ,Those in
+              debt ,In the cause of God, <br />
+              Travellers (including refugees)
+            </div>
+          </div>
+        </div>
+        <div className="row text-center">
+          <div className="col-lg-12">
+            <h1 className="text-center text-uppercase mt-5 text-danger">
+              Types of zakat
+            </h1>
+          </div>
+          <div className="mt-3">
+            <div>
+              <span className="text-secondary text-center">
+                Zakat is one of the five pillars of Islam and refers to the
+                obligatory <br /> charitable contribution that Muslims make to
+                help those in need. <br /> There are several types of zakat in
+                Islam, including.
+              </span>
+              <ul className="text-secondary text-uppercase mt-3 mx-auto">
+                <li>zakat al-fitr</li>
+                <li> zakat al-mal</li>
+                <li>zakat al-fai</li>
+                <li>zakat al-rikaz</li>
               </ul>
             </div>
           </div>
         </div>
         <div className="row">
           <div className="col-lg-12">
-            <h1 className="text-center text-uppercase mt-5">Types of zakat</h1>
-          </div>
-          <div className="mt-3 text-center">
-            <span className="  ">
-              Zakat is one of the five pillars of Islam and refers to the
-              obligatory charitable contribution that Muslims make to help those
-              in need. There are several types of zakat in Islam, including.
-            </span>
-            <ul className="text-justify mt-3">
-              <li>zakat al-fitr</li>
-              <li>zakat al-mal</li>
-              <li>zakat al-fai</li>
-              <li>zakat al-rikaz</li>
-            </ul>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-lg-12">
-            <h1 className="text-center text-uppercase mt-5">Rules of zakat</h1>
+            <h1 className="text-center text-danger text-lg text-uppercase mt-5">Rules of zakat</h1>
             <div className="text-center mt-3">
-              <p>
+              <p className="text-secondary">
                 Muslims are obligated to pay 2.5% of the total value of their
                 wealth less any liabilities in zakat provided they reach nisab.
                 <span className="fw-bold">
@@ -181,8 +185,8 @@ const Zakatpage = () => {
       </div>
       <div className="container">
         <div className="row">
-          <div className="col-lg-6">
-            <div className="mt-5">
+          <div className="col">
+            <div className="mt-3">
               <img
                 src={nisabimg}
                 alt="Nisab rate"
@@ -193,9 +197,9 @@ const Zakatpage = () => {
             </div>
           </div>
           <div className="col-lg-6  ">
-            <h1 className="text-uppercase text-center  mt-4">Nisab Zakat</h1>
+            <h1 className="text-uppercase text-center text-danger  mt-4">Nisab Zakat</h1>
             <div>
-              <p className="text-center mt-3">
+              <p className="text-center mt-3 text-secondary">
                 Zakat is obligatory on Muslims who have reached the minimum
                 threshold of wealth, known as "nisab." The nisab is calculated
                 based on the current value of gold or silver and represents the
@@ -210,12 +214,12 @@ const Zakatpage = () => {
           </div>
         </div>
       </div>
-      <div className="container mt-5">
+      <div className="container my-5 py-5">
         <div className="row">
           <div className="col-lg-6">
-            <h1 className="text-uppercase text-center  mt-4">Zakat ratet</h1>
+            <h1 className="text-uppercase text-center text-danger mt-4">Zakat ratet</h1>
             <div className="mt-5">
-              <p className="text-center">
+              <p className="text-center text-secondary">
                 Zakat is to be paid on Silver in Pure form or Jewellery,
                 Utensils, Decorative items and all household items including
                 crockery, cutlery made of silver at 2.5% of the prevailing
@@ -246,4 +250,4 @@ const Zakatpage = () => {
   );
 };
 
-export default Zakatpage;
+export default ZakatPage;

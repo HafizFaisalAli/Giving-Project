@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import donatetithe from "../images/Donate-tithe.jpg";
 import { useDispatch } from "react-redux";
 import { addDonateInfo } from "../redux/slices/donateSlice";
@@ -13,14 +13,11 @@ const DonateTithe = () => {
   });
 
   const [errors, setErrors] = useState({});
-  const location = useLocation();
   const amountRef = useRef();
   const fullNameRef = useRef();
   const emailRef = useRef();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
-  const org = location.state;
 
   const validateFrom = () => {
     const newErrors = {};
@@ -52,7 +49,7 @@ const DonateTithe = () => {
 
   const payload = {
     type: userData.type,
-    org: org,
+    org: "Caritas Foundation",
     amount: userData.amount,
     fullName: userData.fullName,
     email: userData.email,
@@ -69,16 +66,16 @@ const DonateTithe = () => {
   };
   return (
     <>
-      <div className="mt-5">.</div>
-      <div className="container maincolor my-5 ">
-        <div className="row">
+      <div className="py-5">.</div>
+      <div className="container">
+        <div className="row py-5 mb-5">
           <div className="col-md-7 mt-5 pt-2">
             <div>
               <img
                 src={donatetithe}
                 alt="Donate-tithe"
                 className="d-none d-md-block w-100"
-                // height={500}
+                height={350}
                 // width={600}
               />
             </div>
@@ -88,12 +85,15 @@ const DonateTithe = () => {
               Donate Tithe
             </h4>
             <p className="text-secondary text-uppercase text-center mt-4">
-              {org}
+              Caritas Foundation
             </p>
 
             <form onSubmit={handleSubmit}>
               <div>
-                <label htmlFor="amount" className="form-label text-uppercase">
+                <label
+                  htmlFor="amount"
+                  className="form-label text-uppercase text-secondary"
+                >
                   Donation Amount:
                 </label>
                 <input
@@ -109,7 +109,10 @@ const DonateTithe = () => {
               </div>
               <div className="error text-danger"> {errors.amount} </div>
               <div className="mt-2">
-                <label htmlFor="fullName" className="form-label text-uppercase">
+                <label
+                  htmlFor="fullName"
+                  className="form-label text-uppercase text-secondary"
+                >
                   Full Name:
                 </label>
                 <input
@@ -127,7 +130,7 @@ const DonateTithe = () => {
               <div className="">
                 <label
                   htmlFor="email"
-                  className="form-label text-uppercase mt-2"
+                  className="form-label text-uppercase mt-2 text-secondary"
                 >
                   your email
                 </label>
@@ -146,7 +149,7 @@ const DonateTithe = () => {
               <div className="d-grid mt-4">
                 <button
                   type="submit"
-                  className=" btn btn-outline-danger text-dark fw-bold text-uppercase"
+                  className=" btn btn-danger fw-bold text-uppercase"
                 >
                   Donate Now
                 </button>
