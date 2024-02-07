@@ -7,7 +7,7 @@
 .navbarcolor {
   background-color: #faedcd;
 }
-.text-hover:hover{
+.text-hover:hover {
   color: rgb(221, 97, 97);
 }
 .scroll-style-none {
@@ -21,7 +21,7 @@
   max-height: 500px;
   overflow-y: scroll;
 }
-.dashboard-bg-image{
+.dashboard-bg-image {
   background: url(./images/dashboardBg.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -44,25 +44,33 @@
 }
 
 @media (max-width: 575.9px) {
- 
+  .footer-col {
+    flex-direction: column-reverse;
+  }
 }
 @media (min-width: 576px) and (max-width: 767.9px) {
-
+  .footer-col {
+    flex-direction: column-reverse;
+  }
 }
 @media (min-width: 768px) and (max-width: 792.9px) {
-
+  .footer-col {
+    flex-direction: column-reverse;
+  }
 }
 @media (min-width: 768px) and (max-width: 991.9px) {
-
+  .footer-col {
+    flex-direction: column-reverse;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199.9px) {
-  .text-lg{
+  .text-lg {
     font-size: 70px;
   }
 }
 @media (min-width: 1200px) {
-.text-lg{
-  font-size: 70px;
-}
+  .text-lg {
+    font-size: 70px;
+  }
 }
 /* Media Query End  */

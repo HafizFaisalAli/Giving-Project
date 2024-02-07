@@ -12,7 +12,7 @@ const PayNow = () => {
       {newDonate ? (
         navigate("/donatesuccess")
       ) : (
-        <div className="container mt-5 pt-5">
+        <div className="container mt-md-5 pt-md-5">
           <div className="row py-5">
             <div className="col-md-6 mt-4">
               <div className="">

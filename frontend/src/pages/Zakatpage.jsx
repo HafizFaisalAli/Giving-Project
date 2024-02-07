@@ -4,7 +4,6 @@ import nisabimg from "../images/Untitled design (8).png";
 import zakatrate from "../images/Untitled design (9).png";
 
 const scrollToTop = () => {
-
   faWindows.scrollTo({
     top: 0,
     behavior: "smooth",
@@ -79,33 +78,31 @@ const ZakatPage = () => {
             </div>
           </div>
         </div>
-        <div className="row ">
-          <div className="col-lg-12">
+        <div className="row">
+          <div className="col">
             <h1 className="text-uppercase text-center text-danger mt-5">
               Who is Eligible to pay Zakat?
             </h1>
-            <div className=" text-center">
-              <ul className="mt-4">
-                <span className="fw-bold text-uppercase ">
-                  There are four conditions that one must meet in order to be
-                  eligible to pay Zakat:
-                </span>
-                <li className="mt-3 text-secondary">
-                  A Muslim must have reached the age of puberty (according to
-                  the Hanafi madhaab only).
-                </li>
-                <li className="text-secondary">
-                  A Muslim must have ownership of the Nisab (minimum amount of
-                  wealth) for one lunar year before paying Zakat on it.
-                </li>
-                <li className="text-secondary">
-                  The wealth a Muslim owns must have the ability to increase.
-                </li>
-                <li className="text-secondary">
-                  The Muslim paying Zakat must be of sound mind. A Muslim must
-                  only give Zakat to those who are eligible to receive it.
-                </li>
-              </ul>
+            <div className="text-center mt-4">
+              <span className="fw-bold text-uppercase">
+                There are four conditions that one must meet in order to be
+                eligible to pay Zakat:
+              </span>
+              <li className="mt-3 text-secondary">
+                A Muslim must have reached the age of puberty (according to the
+                Hanafi madhaab only).
+              </li>
+              <li className="text-secondary">
+                A Muslim must have ownership of the Nisab (minimum amount of
+                wealth) for one lunar year before paying Zakat on it.
+              </li>
+              <li className="text-secondary">
+                The wealth a Muslim owns must have the ability to increase.
+              </li>
+              <li className="text-secondary">
+                The Muslim paying Zakat must be of sound mind. A Muslim must
+                only give Zakat to those who are eligible to receive it.
+              </li>
             </div>
           </div>
         </div>
@@ -157,18 +154,20 @@ const ZakatPage = () => {
                 help those in need. <br /> There are several types of zakat in
                 Islam, including.
               </span>
-              <ul className="text-secondary text-uppercase mt-3 mx-auto">
+              <div className="text-secondary text-uppercase mt-3 mx-auto">
                 <li>zakat al-fitr</li>
                 <li> zakat al-mal</li>
                 <li>zakat al-fai</li>
                 <li>zakat al-rikaz</li>
-              </ul>
+              </div>
             </div>
           </div>
         </div>
         <div className="row">
           <div className="col-lg-12">
-            <h1 className="text-center text-danger text-lg text-uppercase mt-5">Rules of zakat</h1>
+            <h1 className="text-center text-danger text-lg text-uppercase mt-5">
+              Rules of zakat
+            </h1>
             <div className="text-center mt-3">
               <p className="text-secondary">
                 Muslims are obligated to pay 2.5% of the total value of their
@@ -186,7 +185,7 @@ const ZakatPage = () => {
       <div className="container">
         <div className="row">
           <div className="col">
-            <div className="mt-3">
+            <div className="mt-md-3">
               <img
                 src={nisabimg}
                 alt="Nisab rate"
@@ -196,8 +195,10 @@ const ZakatPage = () => {
               />
             </div>
           </div>
-          <div className="col-lg-6  ">
-            <h1 className="text-uppercase text-center text-danger  mt-4">Nisab Zakat</h1>
+          <div className="col-lg-6">
+            <h1 className="text-uppercase text-center text-danger  mt-4">
+              Nisab Zakat
+            </h1>
             <div>
               <p className="text-center mt-3 text-secondary">
                 Zakat is obligatory on Muslims who have reached the minimum
@@ -214,11 +215,13 @@ const ZakatPage = () => {
           </div>
         </div>
       </div>
-      <div className="container my-5 py-5">
+      <div className="container my-lg-5 py-lg-5">
         <div className="row">
           <div className="col-lg-6">
-            <h1 className="text-uppercase text-center text-danger mt-4">Zakat ratet</h1>
-            <div className="mt-5">
+            <h1 className="text-uppercase text-center text-danger mt-4">
+              Zakat ratet
+            </h1>
+            <div className="mt-lg-5 mt-3">
               <p className="text-center text-secondary">
                 Zakat is to be paid on Silver in Pure form or Jewellery,
                 Utensils, Decorative items and all household items including
@@ -233,7 +236,7 @@ const ZakatPage = () => {
               </p>
             </div>
           </div>
-          <div className="col-lg-6 ">
+          <div className="col-lg-6 mb-lg-0 mb-5">
             <div>
               <img
                 className=" mt-3 d-block w-100  "

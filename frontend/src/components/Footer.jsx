@@ -9,12 +9,18 @@ import {
 } from "react-icons/fa6";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    windows.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <footer className="navbarcolor shadow">
-        <div className="container py-5">
-          <div className="row">
-            <div className="col-md-6">
+        <div className="container py-lg-5 pt-5">
+          <div className="row flex-lg-row flex-column-reverse">
+            <div className="col-lg-6 mt-lg-0 mt-5">
               <Link to="/" className="navbar-brand text-danger fs-3">
                 <img
                   src={LogoPic}
@@ -60,17 +66,25 @@ const Footer = () => {
                 </li>
               </div>
             </div>
-            <div className="col">
-              <div className="d-flex flex-row mt-3 float-end">
+            <div className="col-lg-6">
+              <div className="d-flex flex-md-row flex-column mt-3 justify-content-around  float-lg-end">
                 <div className="text-center text-uppercase pe-md-5 text-danger">
                   <h1>Zakat</h1>
-                  <Link to="" className="text-decoration-none text-danger">
+                  <Link
+                    to="/donate-zakat"
+                    className="text-decoration-none text-danger"
+                    onClick={() => scrollToTop()}
+                  >
                     <h5 className="opacity-75 text-hover">Zakat Foundation</h5>
                   </Link>
                 </div>
                 <div className="text-center text-uppercase ps-md-5 text-danger">
                   <h1>Tithe</h1>
-                  <Link to="" className="text-decoration-none text-danger">
+                  <Link
+                    to="/donate-tithe"
+                    className="text-decoration-none text-danger"
+                    onClick={() => scrollToTop()}
+                  >
                     <h5 className="opacity-75 text-hover">
                       CARITAS FOUNDATION
                     </h5>
@@ -79,8 +93,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="py-2">
-            <div className="float-end">
+          <div className="py-2 mt-lg-0 mt-5">
+            <div className="float-lg-end text-center">
               <p className="text-danger fs-5 text-uppercase opacity-75">
                 &copy;{new Date().getFullYear()} giving
               </p>

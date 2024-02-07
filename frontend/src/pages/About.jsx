@@ -16,7 +16,7 @@ const About = () => {
   return (
     <>
       <div className="container-fluid px-0 py-4 mt-5 mx-0 overflow-hidden">
-        <div className="row px-0">
+        <div className="row px-0 mt-md-0 mt-4">
           <img
             src={AboutTopPic}
             className="d-block w-100"
@@ -24,11 +24,11 @@ const About = () => {
           />
         </div>
       </div>
-      <div className="container mt-3">
+      <div className="container mt-md-3">
         <div className="row">
           <div className="col-lg-12">
             <div className="">
-              <div className="text-uppercase text-center mt-5 animate__animated animate_fade">
+              <div className="text-uppercase text-center mt-md-5 animate__animated animate_fade">
                 <h1 className="text-lg text-danger">About</h1>
               </div>
               <h5 className="text-center mt-4">
@@ -43,16 +43,16 @@ const About = () => {
                   Consequuntur nihil aliquam <br /> culpa voluptas, illum facere
                   nostrum commodi
                 </p>
-                <div className="my-5">
+                <div className="my-md-5">
                   <Link
                     to="/organization"
-                    className="btn btn-danger text-uppercase px-5 "
+                    className="btn btn-danger text-uppercase px-md-5 px-3"
                     onClick={scrollToTop}
                   >
                     Donate now
                   </Link>
                 </div>
-                <h1 className="text-uppercase text-danger text-center mt-5 pt-5">
+                <h1 className="text-uppercase text-danger text-center mt-md-5 pt-5">
                   Our processes
                 </h1>
                 <div className="row mt-4">
@@ -91,13 +91,13 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="row my-5 py-5">
+        <div className="row my-md-5 py-md-5 py-2">
           <h3 className="text-uppercase text-center text-lg text-danger mb-5">
             Organization <br />
             where you donate
           </h3>
           {/**Zakat foundation portion */}
-          <div className="row mt-4">
+          <div className="row mt-md-4">
             <div className="col-lg-6">
               <h2 className="text-uppercase text-danger text-center">
                 Zakat foundation
@@ -116,13 +116,13 @@ const About = () => {
               </div>
               <Link
                 to="/organization"
-                className="btn btn-danger p-2 mt-2"
+                className="btn btn-danger p-2 mt-md-2 mb-md-0 mb-3"
                 onClick={scrollToTop}
               >
                 View Organization
               </Link>
             </div>
-            <div className="col-lg-6 ps-5">
+            <div className="col-lg-6 ps-lg-5">
               <div className="img-fluid d-block w-100 ">
                 <img
                   className="d-block w-100 rounded"
@@ -137,11 +137,11 @@ const About = () => {
           {/**Zakat foundation portion end */}
 
           {/*Tithing caritas portion*/}
-          <div className="row mt-5 pt-5">
-            <div className="col-lg-6">
+          <div className="row flex-lg-row flex-column-reverse mt-5 pt-5">
+            <div className="col-lg-6 mb-lg-0 mb-5">
               <div className="img-fluid d-block w-100 ">
                 <img
-                  className="d-block w-100 rounded pe-5"
+                  className="d-block w-100 rounded pe-lg-5"
                   height={270}
                   width={300}
                   src={caritas}
@@ -167,7 +167,7 @@ const About = () => {
               </div>
               <Link
                 to="/organization"
-                className="btn btn-danger p-2 mt-2 float-end"
+                className="btn btn-danger p-2 mt-lg-2 float-lg-end mb-lg-0 mb-3"
                 onClick={scrollToTop}
               >
                 View Organization

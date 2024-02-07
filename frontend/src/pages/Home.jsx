@@ -7,43 +7,44 @@ import SliderPic4 from "../images/SliderPic4.png";
 import { Link } from "react-router-dom";
 import headerPic from "../images/headerPic.png";
 
-const scrollToTop = () => {
-  windows.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-};
 const Home = () => {
+  const scrollToTop = () => {
+    windows.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <header className="bg-danger vh-100 mt-5 py-5">
         <div className="container">
           <div className="row mt-3">
             <div className="col d-flex align-items-center">
-              <div className="">
+              <div className="mt-5 pt-4 mt-lg-0 pt-lg-0">
                 <h1 className="text-light text-lg 1h-1">
                   Let's help people <br />
                   together
                 </h1>
                 <p className="text-light">
                   Donation is not the name of giving money to people, it is the
-                  name of humanity. Today People's look forword to your help.
+                  name of <br />
+                  humanity. Today People's look forword to your help.
                 </p>
-                <div className="d-flex- flex-row mt-5">
+                <div className="d-flex- flex-row mt-md-5 mt-4">
                   <Link to="/donate-zakat">
-                    <button className="btn btn-light me-2 text-danger fs-5 px-4">
+                    <button className="btn btn-light me-2 text-danger px-md-4">
                       Donate Zakat
                     </button>
                   </Link>
                   <Link to="/donate-tithe">
-                    <button className="btn btn-light text-danger fs-5 px-4">
+                    <button className="btn btn-light text-danger px-md-4">
                       Donate Tithe
                     </button>
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="col">
+            <div className="col d-lg-block d-none">
               <div className="px-4">
                 <img
                   src={headerPic}

@@ -52,7 +52,7 @@ const TithingPage = () => {
           <h1 className="text-uppercase text-center text-danger text-lg my-5">
             Types of Tithing
           </h1>
-          <div className="col-lg-4">
+          <div className="col-lg-4 mb-lg-0 mb-4">
             <div className="card shadow">
               <div className="card-header">
                 <img src={tithebymoney} alt="" className="img-fluid" />
@@ -69,7 +69,7 @@ const TithingPage = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 mb-lg-0 mb-4">
             <div className="card shadow">
               <div className="card-header">
                 <img src={tithbyfood} alt="" className="img-fluid" />
@@ -239,7 +239,7 @@ const TithingPage = () => {
             </div>
           </div>
         </div>
-        <div className="row py-5">
+        <div className="row py-lg-5">
           <div className="col-lg-12 my-5">
             <h1 className="text-uppercase text-center text-danger text-lg">
               Who can receive Tithe
