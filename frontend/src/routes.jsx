@@ -1,14 +1,14 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import {
-  Homepage,
-  Zakatpage,
-  Tithingpage,
-  Aboutus,
+  Home,
+  ZakatPage,
+  TithingPage,
+  About,
   OrganizationPage,
   DonateZakat,
   DonateTithe,
   ZakatCalculator,
-  TithCalculator,
+  TitheCalculator,
   PayNow,
   Admin,
 } from "./pages/PagesExport";
@@ -30,19 +30,19 @@ const routes = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Homepage />,
+        element: <Home />,
       },
       {
-        path: "/Zakatpage",
-        element: <Zakatpage />,
+        path: "/zakat",
+        element: <ZakatPage />,
       },
       {
-        path: "/Tithingpage",
-        element: <Tithingpage />,
+        path: "/tithing",
+        element: <TithingPage />,
       },
       {
-        path: "/Aboutus",
-        element: <Aboutus />,
+        path: "/about",
+        element: <About />,
       },
       {
         path: "/organization",
@@ -57,12 +57,12 @@ const routes = createBrowserRouter([
         element: <DonateTithe />,
       },
       {
-        path: "/ZakatCalculator",
+        path: "/zakatcalculator",
         element: <ZakatCalculator />,
       },
       {
-        path: "/TithCalculator",
-        element: <TithCalculator />,
+        path: "/tithecalculator",
+        element: <TitheCalculator />,
       },
       {
         path: "/pay-now",
@@ -85,7 +85,7 @@ const routes = createBrowserRouter([
       },
       {
         path: "donatezakat",
-        element: <DonationZakat/>,
+        element: <DonationZakat />,
       },
       {
         path: "donatetithe",

@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import donatezakat from "../images/zakatdonate1.png";
 import { useDispatch } from "react-redux";
 import { addDonateInfo } from "../redux/slices/donateSlice";
-import { useLocation } from "react-router-dom";
 
 const DonateZakat = () => {
   const [userData, setUserData] = useState({
@@ -18,8 +17,6 @@ const DonateZakat = () => {
   const fullNameRef = useRef();
   const emailRef = useRef();
   const navigate = useNavigate();
-  const location = useLocation();
-  const org = location.state;
 
   const validateFrom = () => {
     const newErrors = {};
@@ -50,7 +47,7 @@ const DonateZakat = () => {
   }; 
   const payload = {
     type: userData.type,
-    org: org,
+    org: "ZAKAT FOUNDATION",
     amount: userData.amount,
     fullName: userData.fullName,
     email: userData.email,
@@ -66,9 +63,9 @@ const DonateZakat = () => {
   };
   return (
     <>
-      <div className="mt-5">.</div>
-      <div className="container maincolor my-5 ">
-        <div className="row">
+      <div className="py-5">.</div>
+      <div className="container my-5 ">
+        <div className="row pb-5">
           <div className="col-md-7 mt-5 pt-2">
             <div>
               <img
@@ -85,12 +82,12 @@ const DonateZakat = () => {
               Donate Zakat
             </h4>
             <p className="text-secondary text-uppercase text-center mt-4">
-              {org}
+            ZAKAT FOUNDATION
             </p>
 
             <form onSubmit={handleSubmit}>
               <div>
-                <label htmlFor="amount" className="form-label text-uppercase">
+                <label htmlFor="amount" className="form-label text-uppercase text-secondary">
                   Donation Amount:
                 </label>
                 <input
@@ -106,7 +103,7 @@ const DonateZakat = () => {
               </div>
               <div className="error text-danger"> {errors.amount} </div>
               <div className="mt-2">
-                <label htmlFor="fullName" className="form-label text-uppercase">
+                <label htmlFor="fullName" className="form-label text-uppercase text-secondary">
                   Full Name:
                 </label>
                 <input
@@ -124,7 +121,7 @@ const DonateZakat = () => {
               <div className="">
                 <label
                   htmlFor="email"
-                  className="form-label text-uppercase mt-2"
+                  className="form-label text-secondary text-uppercase mt-2"
                 >
                   your email
                 </label>
@@ -143,7 +140,7 @@ const DonateZakat = () => {
               <div className="d-grid mt-4">
                 <button
                   type="submit"
-                  className=" btn btn-outline-danger text-dark fw-bold text-uppercase"
+                  className=" btn btn-danger fw-bold text-uppercase"
                 >
                   Donate Now
                 </button>

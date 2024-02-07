@@ -9,19 +9,22 @@ const OrganizationPage = () => {
   return (
     <>
       <div className="container mb-5">
-        <div className="row mt-5">
-          <h2 className="text-center text-uppercase mt-5 py-5">
-            Choose your Organization
-          </h2>
+        <div className="row my-3 pt-5">
+          <div className="mt-5 pt-5">
+            <h1 className="text-center text-uppercase text-danger">
+              {" "}
+              Choose your <br />
+            </h1>
+            <h2 className="text-center text-uppercase text-danger text-lg">
+              Organization
+            </h2>
+          </div>
         </div>
-        <div className="row">
+        <div className="row py-5">
           <div className="col-md-6">
-            <h3 className="text-danger text-center mb-5 text-uppercase">
-              Donate Zakat
-            </h3>
             <div
               onClick={() =>
-                navigate("/donate-zakat", { state: "Zakat Foundation" })
+                navigate("/donate-zakat")
               }
               className="text-danger text-decoration-none my-3 cursor-pointer"
             >
@@ -34,10 +37,10 @@ const OrganizationPage = () => {
                   width={150}
                 />
                 <div className="ms-3 mt-3">
-                  <h4 className="text-uppercase mt-3 text-secondary ">
+                  <h4 className="text-uppercase mt-3 text-danger">
                     Zakat Foundation
                   </h4>
-                  <p className="text-dark">
+                  <p className="text-secondary">
                     Zakat is the amount of money each Muslim adult should give
                     to supply categories of people.
                   </p>
@@ -46,12 +49,9 @@ const OrganizationPage = () => {
             </div>
           </div>
           <div className="col-md-6">
-            <h3 className="text-danger text-center mb-5 text-uppercase">
-              Donate Tithe
-            </h3>
             <div
               onClick={() =>
-                navigate("/donate-tithe", { state: "Caritas Foundation" })
+                navigate("/donate-tithe")
               }
               className="text-danger text-decoration-none my-3 cursor-pointer"
             >
@@ -64,10 +64,10 @@ const OrganizationPage = () => {
                   width={150}
                 />
                 <div className="ms-3 mt-3">
-                  <h4 className="text-uppercase mt-3 text-secondary ">
+                  <h4 className="text-uppercase mt-3 text-danger">
                     Caritas Foundation
                   </h4>
-                  <p className="text-dark">
+                  <p className="text-secondary">
                     The living force of love, answering the call of the Gospels.
                   </p>
                 </div>
