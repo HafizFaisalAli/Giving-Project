@@ -161,7 +161,7 @@ const ZakatCalculator = () => {
 
                 <div className="row d-grid mt-3 mx-auto">
                   <Link
-                    to="/donate-zakat"
+                    to="/organization"
                     className=" btn btn-danger text-decoration-none text-light"
                   >
                     Donate Zakat

@@ -120,7 +120,7 @@ const TithCalculator = () => {
 
                 <div className="row d-grid mt-3 mx-auto">
                   <Link
-                    to="/donate-tithe"
+                    to="/organization"
                     className=" btn btn-danger text-decoration-none text-light"
                   >
                     Donate Tithe
