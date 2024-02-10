@@ -49,21 +49,21 @@ const Footer = () => {
                     <FaInstagram className="fs-3 text-hover" />
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="" className="px-1 text-danger">
                     <FaSkype className="fs-3 text-hover" />
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to="" className="px-1 text-danger">
                     <FaXTwitter className="fs-3 text-hover" />
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="" className="px-1 text-danger">
                     <FaTiktok className="fs-3 text-hover " />
                   </Link>
-                </li>
+                </li> */}
               </div>
             </div>
             <div className="col-lg-6">

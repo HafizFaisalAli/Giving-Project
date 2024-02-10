@@ -31,12 +31,12 @@ const Home = () => {
                   humanity. Today People's look forword to your help.
                 </p>
                 <div className="d-flex- flex-row mt-md-5 mt-4">
-                  <Link to="/donate-zakat">
+                  <Link to="/organization">
                     <button className="btn btn-light me-2 text-danger px-md-4">
                       Donate Zakat
                     </button>
                   </Link>
-                  <Link to="/donate-tithe">
+                  <Link to="/organization">
                     <button className="btn btn-light text-danger px-md-4">
                       Donate Tithe
                     </button>
