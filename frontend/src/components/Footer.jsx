@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import LogoPic from "../images/givingLogo.png";
 import {
+  FaTwitter,
   FaFacebook,
   FaInstagram,
   FaSkype,
@@ -56,7 +57,7 @@ const Footer = () => {
                 </li> */}
                 <li>
                   <Link to="" className="px-1 text-danger">
-                    <FaXTwitter className="fs-3 text-hover" />
+                    <FaTwitter className="fs-3 text-hover" />
                   </Link>
                 </li>
                 {/* <li>
