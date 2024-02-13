@@ -31,11 +31,11 @@ const Footer = () => {
               </Link>
               <div className="pt-3 ps-1 ms-1">
                 <p className="text-danger opacity-75">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Possimus, aut! Minima exercitationem iusto quibusdam aliquid
-                  neque! Numquam vitae placeat non, doloremque deleniti
-                  exercitationem distinctio commodi, laborum temporibus quae ea
-                  molestias?
+                  Welcome to our platform, where individuals of all faiths come
+                  together to fulfill their religious obligations through
+                  charitable giving. We provide a trusted space for Muslims to
+                  fulfill their Zakat and Christians to contribute their tithe`s,
+                  fostering unity and compassion in our diverse community.
                 </p>
               </div>
               <div className="d-flex ps-1 ms-1">
