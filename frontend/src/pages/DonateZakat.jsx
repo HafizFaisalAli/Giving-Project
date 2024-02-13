@@ -47,7 +47,7 @@ const DonateZakat = () => {
   }; 
   const payload = {
     type: userData.type,
-    org: "ZAKAT FOUNDATION",
+    org: "Shaukat Khanum",
     amount: userData.amount,
     fullName: userData.fullName,
     email: userData.email,
@@ -82,7 +82,7 @@ const DonateZakat = () => {
               Donate Zakat
             </h4>
             <p className="text-secondary text-uppercase text-center mt-4">
-            ZAKAT FOUNDATION
+            Shaukat Khanum
             </p>
 
             <form onSubmit={handleSubmit}>

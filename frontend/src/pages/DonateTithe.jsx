@@ -22,7 +22,7 @@ const DonateTithe = () => {
   const validateFrom = () => {
     const newErrors = {};
     if (userData.amount < 140) {
-      newErrors.amount = "Donation amount must be greater then 1.";
+      newErrors.amount = "Donation amount must be greater then 140Rs.";
       amountRef.current.focus();
     } else if (userData.fullName.length === 0) {
       newErrors.fullName = "Please enter your name first.";

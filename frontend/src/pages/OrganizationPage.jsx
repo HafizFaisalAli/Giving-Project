@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import zakatfoundation from "../images/Zakatfoundation.png";
+import shaukatkhanum from "../images/shaukatkhanum.png";
 import caritasfoundation from "../images/Caritasimage.png";
 
 const OrganizationPage = () => {
@@ -22,39 +22,49 @@ const OrganizationPage = () => {
         </div>
         <div className="row py-5">
           <div className="col-md-6">
-            <div
-              onClick={() =>
-                navigate("/donate-zakat")
-              }
-              className="text-danger text-decoration-none my-3 cursor-pointer"
-            >
+            <div className="text-danger text-decoration-none my-3">
               <div className="d-flex">
                 <img
                   className="rounded-circle border border-3 border-danger"
-                  src={zakatfoundation}
+                  src={shaukatkhanum}
                   alt="Zakat foundation"
                   height={150}
                   width={150}
                 />
                 <div className="ms-3 mt-3">
                   <h4 className="text-uppercase mt-3 text-danger">
-                    Zakat Foundation
+                    Shaukat Khanum
                   </h4>
                   <p className="text-secondary">
-                    Zakat is the amount of money each Muslim adult should give
-                    to supply categories of people.
+                    <span className="fw-bold">Vision:</span>
+                    <br />
+                    “Our vision is to be the premier institution for the
+                    diagnosis and treatment of cancer in the region irrespective
+                    of the ability of the patient to pay and to be the leading
+                    centre for research into the causes and treatment of cancer
+                    in our region.”
+                    <br />
+                    <span className="fw-bold">Mission:</span>
+                    <br />
+                    “To act as a model institution to alleviate the suffering of
+                    patients with cancer through the application of modern
+                    methods of curative and palliative therapy irrespective of
+                    their ability to pay, the education of health care
+                    professionals and the public and perform research into the
+                    causes and treatment of cancer.”
                   </p>
+                  <button
+                    className="btn btn-danger float-end px-5"
+                    onClick={() => navigate("/donate-zakat")}
+                  >
+                    Continue
+                  </button>
                 </div>
               </div>
             </div>
           </div>
           <div className="col-md-6">
-            <div
-              onClick={() =>
-                navigate("/donate-tithe")
-              }
-              className="text-danger text-decoration-none my-3 cursor-pointer"
-            >
+            <div className="text-danger text-decoration-none my-3">
               <div className="d-flex">
                 <img
                   className="rounded-circle border border-3 border-danger"
@@ -68,8 +78,29 @@ const OrganizationPage = () => {
                     Caritas Foundation
                   </h4>
                   <p className="text-secondary">
-                    The living force of love, answering the call of the Gospels.
+                    <span className="fw-bold">Mission</span>
+                    <br />
+                    Caritas shares the mission of the Catholic Church to serve
+                    the poor and to promote charity and justice throughout the
+                    world. We are inspired by the Gospels, by the teachings of
+                    the Catholic Church and by the hopes of people living in
+                    poverty.
+                    <br />
+                    <span className="fw-bold">Vision</span>
+                    <br />
+                    Caritas Internationalis is at the heart of the Church’s
+                    mission.Its member organisations link together in a
+                    confederation to serve the world’s poor, vulnerable,
+                    dispossessed and marginalized. Catholic Social Teaching and by the experiences
+                    and hopes of people who are disadvantaged and living in
+                    poverty.
                   </p>
+                  <button
+                    className="btn btn-danger float-end px-5"
+                    onClick={() => navigate("/donate-tithe")}
+                  >
+                    Continue
+                  </button>
                 </div>
               </div>
             </div>

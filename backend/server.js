@@ -2,7 +2,6 @@ import express from "express";
 import morgan from "morgan";
 import colors from "colors";
 import dotenv from "dotenv";
-import path from "path";
 import errorHandler from "./middlewares/errorHandler.js";
 import ConnectDb from "./config/db.js";
 import authRoutes from "./routes/auth.js";
@@ -20,15 +19,6 @@ app.get("/api", (req, res) => {
 });
 app.use("/api/auth", authRoutes);
 app.use("/api/donate", donateRouter);
-
-const __dirname = path.resolve();
-// if (process.env.NODE_MODE !== "development") {
-app.use("/", express.static(path.join(__dirname, "frontend", "dist")));
-
-app.use("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
-});
-// }
 
 app.use(errorHandler);
 const port = process.env.PORT || 5555;

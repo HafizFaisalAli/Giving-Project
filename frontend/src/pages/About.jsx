@@ -5,7 +5,7 @@ import { FcDonate } from "react-icons/fc";
 import { HiInformationCircle } from "react-icons/hi";
 import AboutTopPic from "../images/AboutTopPic.png";
 import caritas from "../images/Caritasimage.png";
-import zakatfoundation from "../images/Zakatfoundation.png";
+import shaukatkhanum from "../images/shaukatkhanum.png";
 const scrollToTop = () => {
   windows.scrollTo({
     top: 0,
@@ -32,16 +32,17 @@ const About = () => {
                 <h1 className="text-lg text-danger">About</h1>
               </div>
               <h5 className="text-center mt-4">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-                rerum repudiandae <br /> soluta harum quis et odio aspernatur
-                sed laboriosam perferendis <br /> error quod molestiae itaque
-                numquam expedita? <br /> Perspiciatis ab perferendis at!
+                Welcome to our platform, where individuals of all faiths come
+                together to fulfill their religious obligations through
+                charitable giving. We provide a trusted space for Muslims to
+                fulfill their Zakat and Christians to contribute their tithes,
+                fostering unity and compassion in our diverse community.
               </h5>
               <div className="text-center mt-4">
                 <p className="text-secondary">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Consequuntur nihil aliquam <br /> culpa voluptas, illum facere
-                  nostrum commodi
+                  Guiding your charitable contributions with accuracy and ease.
+                  Transform generosity into impact <br /> with our seamless
+                  donation platform.
                 </p>
                 <div className="my-md-5">
                   <Link
@@ -60,9 +61,8 @@ const About = () => {
                     <CiCalculator2 size={100} />
                     <div className="mt-3">
                       <p className="text-secondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quia aspernatur excepturi soluta. Harum id incidunt
-                        provident officiis in fuga voluptas odit!
+                        guiding your charitable contributions with accuracy and
+                        ease.
                       </p>
                     </div>
                   </div>
@@ -70,9 +70,8 @@ const About = () => {
                     <FcDonate size={100} />
                     <div className="mt-3">
                       <p className="text-secondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quia aspernatur excepturi soluta. Harum id incidunt
-                        provident officiis in fuga voluptas odit!
+                        Transform generosity into impact with our seamless
+                        donation platform.
                       </p>
                     </div>
                   </div>
@@ -80,9 +79,8 @@ const About = () => {
                     <HiInformationCircle size={100} />
                     <div className="mt-3">
                       <p className="text-secondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quia aspernatur excepturi soluta. Harum id incidunt
-                        provident officiis in fuga voluptas odit!
+                        Read about Zakat and tithing for a clear understanding
+                        and significance in your faith.
                       </p>
                     </div>
                   </div>
@@ -100,22 +98,30 @@ const About = () => {
           <div className="row mt-md-4">
             <div className="col-lg-6">
               <h2 className="text-uppercase text-danger text-center">
-                Zakat foundation
+                Shaukat Khanum
               </h2>
               <div className="mt-4 text-justify">
                 <p className="text-secondary">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Placeat atque, tenetur deserunt omnis ab harum suscipit
-                  maiores sint nostrum sapiente quidem est nobis hic nisi qui
-                  vel iure exercitationem eius. Lorem ipsum dolor, sit amet
-                  consectetur adipisicing elit. Provident voluptates voluptatum
-                  iure eius vel, ipsa soluta perspiciatis reiciendis deserunt
-                  nisi incidunt. Magni nisi magnam optio alias ratione labore
-                  doloribus inventore.
+                  <span className="fw-bold">Vision:</span>
+                  <br />
+                  “Our vision is to be the premier institution for the diagnosis
+                  and treatment of cancer in the region irrespective of the
+                  ability of the patient to pay and to be the leading centre for
+                  research into the causes and treatment of cancer in our
+                  region.”
+                  <br />
+                  <span className="fw-bold">Mission:</span>
+                  <br />
+                  “To act as a model institution to alleviate the suffering of
+                  patients with cancer through the application of modern methods
+                  of curative and palliative therapy irrespective of their
+                  ability to pay, the education of health care professionals and
+                  the public and perform research into the causes and treatment
+                  of cancer.”
                 </p>
               </div>
               <Link
-                to="/organization"
+                to="/donate-zakat"
                 className="btn btn-danger p-2 mt-md-2 mb-md-0 mb-3"
                 onClick={scrollToTop}
               >
@@ -128,7 +134,7 @@ const About = () => {
                   className="d-block w-100 rounded"
                   height={270}
                   width={300}
-                  src={zakatfoundation}
+                  src={shaukatkhanum}
                   alt=""
                 />
               </div>
@@ -155,18 +161,25 @@ const About = () => {
               </h2>
               <div className="mt-4 text-justify">
                 <p className="text-secondary">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Placeat atque, tenetur deserunt omnis ab harum suscipit
-                  maiores sint nostrum sapiente quidem est nobis hic nisi qui
-                  vel iure exercitationem eius. Lorem ipsum dolor, sit amet
-                  consectetur adipisicing elit. Provident voluptates voluptatum
-                  iure eius vel, ipsa soluta perspiciatis reiciendis deserunt
-                  nisi incidunt. Magni nisi magnam optio alias ratione labore
-                  doloribus inventore.
+                  <span className="fw-bold">Mission</span>
+                  <br />
+                  Caritas shares the mission of the Catholic Church to serve the
+                  poor and to promote charity and justice throughout the world.
+                  We are inspired by the Gospels, by the teachings of the
+                  Catholic Church and by the hopes of people living in poverty.
+                  <br />
+                  <span className="fw-bold">Vision</span>
+                  <br />
+                  Caritas Internationalis is at the heart of the Church’s
+                  mission.Its member organisations link together in a
+                  confederation to serve the world’s poor, vulnerable,
+                  dispossessed and marginalized. Catholic Social Teaching and by
+                  the experiences and hopes of people who are disadvantaged and
+                  living in poverty.
                 </p>
               </div>
               <Link
-                to="/organization"
+                to="/donate-tithe"
                 className="btn btn-danger p-2 mt-lg-2 float-lg-end mb-lg-0 mb-3"
                 onClick={scrollToTop}
               >

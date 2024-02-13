@@ -1,12 +1,6 @@
 import { Link } from "react-router-dom";
 import LogoPic from "../images/givingLogo.png";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaSkype,
-  FaXTwitter,
-  FaTiktok,
-} from "react-icons/fa6";
+import { FaXTwitter, FaFacebook, FaInstagram } from "react-icons/fa6";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -34,7 +28,7 @@ const Footer = () => {
                   Welcome to our platform, where individuals of all faiths come
                   together to fulfill their religious obligations through
                   charitable giving. We provide a trusted space for Muslims to
-                  fulfill their Zakat and Christians to contribute their tithe`s,
+                  fulfill their Zakat and Christians to contribute their tithes,
                   fostering unity and compassion in our diverse community.
                 </p>
               </div>
@@ -51,17 +45,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link to="" className="px-1 text-danger">
-                    <FaSkype className="fs-3 text-hover" />
-                  </Link>
-                </li>
-                <li>
-                  <Link to="" className="px-1 text-danger">
                     <FaXTwitter className="fs-3 text-hover" />
-                  </Link>
-                </li>
-                <li>
-                  <Link to="" className="px-1 text-danger">
-                    <FaTiktok className="fs-3 text-hover " />
                   </Link>
                 </li>
               </div>
@@ -75,7 +59,7 @@ const Footer = () => {
                     className="text-decoration-none text-danger"
                     onClick={() => scrollToTop()}
                   >
-                    <h5 className="opacity-75 text-hover">Zakat Foundation</h5>
+                    <h5 className="opacity-75 text-hover">Shaukat Khanum</h5>
                   </Link>
                 </div>
                 <div className="text-center text-uppercase ps-md-5 text-danger">

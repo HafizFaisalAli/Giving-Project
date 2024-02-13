@@ -13,7 +13,7 @@ const sendDonationEmail = async (donerInfo) => {
   });
 
   const mailOptions = {
-    from: "fgraphicart786@gmail.com",
+    from: "givingfoundation5@gmail.com",
     to: donerInfo.email,
     subject: "Donation Confirmation",
     text: `Thank you for your donation, ${donerInfo.fullName}! 
