@@ -30,7 +30,7 @@ You donated ${donerInfo.amount} PKR to ${donerInfo.org}.`,
 
 export const newDonate = asyncHandler(async (req, res) => {
   const stripe = new Stripe(
-    "sk_test_51Odyx7IchGlJTdF35Ni16hsLpaZBdK214s0S3RJveYpXGemaMkHhLkZfAzV9ilB4XihuEk8FO88bitYCC8lP83Pm00QdLVDsjz"
+    "add our private key"
   );
   const { donerInfo, paymentMethod } = req.body;
   try {
